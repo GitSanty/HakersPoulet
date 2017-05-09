@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Formuliere</title>
+   
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="css/Form_contact_HP.css">  -->
+  
+
+
+ <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+        $("#id_autre").click(function () {
+            if ($(this).is(":checked")) {
+                $("#divAutre").show();
+            } else {
+                $("#divAutre").hide();
+            }
+        });
+    });
+</script>
+
+</head>
+<body>
+
+
+
+
+<div class="icon"><h1>Contactez nous: support technique 24h - 7/7 
+  <img src="https://github.com/becodeorg/BXLCentral/raw/master/Projects/1-Formulaire/hackers-poulette-logo.png" 
+  class=" rounded" height="200" width="200" >
+
+  </h1>
+</div>
+
+<br>
+   
+<form class="form-horizontal" action="validation.php" method="post">
+ 
+ <table>
+    <fieldset id="inputs">
+
+
+<div class="col-xs-8 col-sm-6">
+      <div class="form-group">
+        <label for="inputNom" class="col-sm-3 control-label">Nom prénom</label> 
+        <div class="col-sm-8">
+        <input  class="form-control" id="IDnomPrenom" name="inputNom" type="text" placeholder="Nom prénom" autofocus required>
+        </div>
+      </div>
+      <div></div>
+
+      <div class="form-group">
+        <label for="inputEmail" class="col-sm-3 control-label">E-mail</label> 
+        <div class="col-sm-8">
+        <input  class="form-control" id="IDemail" name="inputEmail" type="email" placeholder="E-mail" autofocus required>
+        </div>
+      </div>
+      <div></div>
+
+      <div class="form-group">
+        <label for="inputPays" class="col-sm-3 control-label">Pays</label> 
+        <div class="col-sm-8">
+        <input  class="form-control" id="IDPays" name="inputPays" type="text" placeholder="Pays" autofocus required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="inputMessage" class="col-sm-3 control-label">Message</label> 
+        <div class="col-sm-9">
+        <textarea  class="form-control" id="message" name="inputMessage" rows="7" autofocus="required" > </textarea>
+        </div>
+      </div>
+</div>       
+
+<div class="col-xs-8 col-sm-6">
+
+      <label>Genre</label>
+
+      <div class="form-group">
+        <label for="femmeradio" class="col-sm-2 control-label">Femme</label> 
+        <div class="col-sm-1">
+        <input  class="form-control" name="Genre" type="radio" value="femme" id="femmeradio" autofocus required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="hommeradio" class="col-sm-2 control-label">Homme</label> 
+        <div class="col-sm-1">
+        <input  class="form-control" name="Genre" type="radio" value="homme" id="hommeradio" autofocus required>
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <label for="autreradio" class="col-sm-2 control-label">Autre</label> 
+        <div class="col-sm-1">
+        <input  class="form-control" name="Genre" type="radio" value="autre" id="autreradio" autofocus required>
+        </div>
+      </div>
+               
+       
+        <label>Sujets</label>
+
+        <div class="form-group">
+          <label for="id_suget1" class="col-sm-2 control-label">Sujet 1</label> 
+            <div class="col-sm-1">
+                  <input  class="form-control" name="Sugets" type="checkbox" value="suget1" id="id_suget1">
+            </div>
+        </div>
+
+
+        <div class="form-group">
+          <label for="id_suget2" class="col-sm-2 control-label">Sujet 2</label> 
+            <div class="col-sm-1">
+                  <input  class="form-control" name="Sugets" type="checkbox" value="suget2" id="id_suget2">
+            </div>
+        </div>
+
+        <div class="form-group">
+          <label for="id_autre" class="col-sm-2 control-label">Autre</label> 
+            <div class="col-sm-1">
+                  <input  class="form-control" name="Sugets" type="checkbox" value="autre" id="id_autre">
+            </div>
+        </div>
+
+          <!-- Hidden the box to Autre field -->
+
+          <div class="col-sm-8" id="divAutre" style="display: none;">
+          <input id="txtautre" type="text" >
+          </div>
+
+
+</div>
+
+<button class="btn btn-primary" type="submit" value="Envoyer">Envoyer</button>
+
+
+    </fieldset>
+
+    <fieldset id="actions">
+
+
+    </fieldset>
+    <!-- <p><input type="submit" id="submit" value="Envoyer"></p> -->
+
+
+    
+</table>
+
+
+
+
+</body>
+</html>
